@@ -85,25 +85,12 @@ jQuery(document).ready(function() {
 	$j('.custom.emoticon').live("click", function() {
 		var cn = $(this).className;
 		var num = parseInt(cn.substr(cn.length-3, cn.length));
-		var node = $(this).parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
-			if (node.className == "_2pt") {
-				node.children[1].children[0].value += code[num];
-			}
-		/*
-		var num = parseInt(cn.substr(cn.length-3, cn.length));
 		var emoClass = cn.substr(cn.length-6, cn.length);
-		console.log(code[num]);
-		console.log($j(".emo000"));
-		console.log($j("."+emoClass));
-		boxes = ($j("."+emoClass)).length;
-		for (var input=0; input < boxes; input++) {
-			console.log(input);
-			console.log($j(".emo015")[0]);
-			var node = $(this).parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
-			if (node.className == "_2pt") {
-				node.children[1].children[0].value += code[num];
-			}
-		}*/
+		var node = $(this).parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
+		if (node.className == "_2pt") {
+			node.children[1].children[0].value += code[num];
+		}
+		
 	});
 });
 }
